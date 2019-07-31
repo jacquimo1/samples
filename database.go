@@ -37,7 +37,7 @@ type Visitor struct {
 
 func (v Visitor) PrepareConnection() {
 	// TODO: use env vars, vault, or something else
-	p.conn_string := `
+	p.Connection := `
 		host = localhost
 		port= 5432
 		user = pseudoweb_visitor
@@ -46,7 +46,7 @@ func (v Visitor) PrepareConnection() {
 }
 
 func (a Accessor) Connect() (*Database, error) {
-	db, err := sql.Open("postgres", a.conn_string)
+	db, err := sql.Open("postgres", a.Connection)
 	if err != nil {
 		return nil, err
 	}
