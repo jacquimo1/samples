@@ -1,5 +1,7 @@
 package models
-
+/*
+This is a work in progress for a web application using dependency injection and granular access controls with Postgres.
+*/
 import (
     _ "github.com/lib/pq"
     "database/sql"
