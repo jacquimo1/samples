@@ -1,4 +1,3 @@
-#/user/
 
 def numLetters(string_list):
 	tokens_dict_dict = dict()
