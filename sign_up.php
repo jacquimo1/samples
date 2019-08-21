@@ -15,8 +15,6 @@ function insert_user($user) {
 	if (!$connection) {
 		return 'Database connection failed.';
 	}
-	//$statement = "INSERT INTO users VALUES ($1)";
-	//$result = pg_insert($connection, 'users', $user, PG_DML_ESCAPE);
 	$result =   pg_query_params($connection, 'INSERT INTO users (userid, username, hashedpassword) VALUES ($1, $2, $3)', $user);
 	return $result; 
 }
