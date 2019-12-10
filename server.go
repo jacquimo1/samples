@@ -114,7 +114,6 @@ func register(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-
 func messenger(r *http.Request) []userMessage {
 	var	(
 		data 	[]userMessage
@@ -125,7 +124,6 @@ func messenger(r *http.Request) []userMessage {
 	data = append(data, message)
 	return data
 }
-
 
 func index(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
@@ -145,7 +143,6 @@ func index(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("404: neither get nor post")
 	}
 }
-
 
 func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
